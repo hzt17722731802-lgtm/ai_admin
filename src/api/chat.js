@@ -8,6 +8,7 @@ const chatRequest = axios.create({
   timeout: 30000 // 对话接口需要更长的超时时间
 })
 
+
 // AI 对话接口（流式）
 export function chat(prompt, chatId = null) {
   const params = new URLSearchParams()
