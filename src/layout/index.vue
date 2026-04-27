@@ -29,17 +29,17 @@
           router
           class="side-menu"
         >
-          <el-menu-item index="/employee">
+          <el-menu-item index="/admin/employee">
             <el-icon><user /></el-icon>
             <template #title>员工管理</template>
           </el-menu-item>
           
-          <el-menu-item index="/user">
+          <el-menu-item index="/admin/user">
             <el-icon><avatar /></el-icon>
             <template #title>用户管理</template>
           </el-menu-item>
           
-          <el-menu-item index="/knowledge">
+          <el-menu-item index="/admin/knowledge">
             <el-icon><connection /></el-icon>
             <template #title>知识图谱管理</template>
           </el-menu-item>

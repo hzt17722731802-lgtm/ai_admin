@@ -15,6 +15,10 @@ export default defineConfig({
       '/admin': {
         target: 'http://localhost:8080',
         changeOrigin: true
+      },
+      '/ai': {
+        target: 'http://localhost:8080',
+        changeOrigin: true
       }
     }
   }
