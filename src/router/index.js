@@ -39,6 +39,44 @@ const routes = [
         meta: { title: 'AI 智能对话' }
       }
     ]
+  },
+  {
+    path: '/service/login',
+    name: 'ServiceLogin',
+    component: () => import('@/views/service/Login.vue'),
+    meta: { title: '客服登录' }
+  },
+  {
+    path: '/service',
+    name: 'ServiceLayout',
+    component: () => import('@/layout/ServiceLayout.vue'),
+    redirect: '/service/workbench',
+    children: [
+      {
+        path: 'workbench',
+        name: 'ServiceWorkbench',
+        component: () => import('@/views/service/Workbench.vue'),
+        meta: { title: '工作台' }
+      },
+      {
+        path: 'performance',
+        name: 'ServicePerformance',
+        component: () => import('@/views/service/Performance.vue'),
+        meta: { title: '绩效查看' }
+      },
+      {
+        path: 'chats',
+        name: 'ServiceChats',
+        component: () => import('@/views/service/Chats.vue'),
+        meta: { title: '聊天记录' }
+      },
+      {
+        path: 'ai-chat',
+        name: 'ServiceAiChat',
+        component: () => import('@/views/service/AiChat.vue'),
+        meta: { title: 'AI 对话' }
+      }
+    ]
   }
 ]
 

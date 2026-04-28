@@ -20,4 +20,17 @@ app.use(ElementPlus, {
   locale: zhCn
 })
 
+router.beforeEach((to, from, next) => {
+  if (to.path.startsWith('/service') && to.path !== '/service/login') {
+    const token = localStorage.getItem('service_token')
+    if (!token) {
+      next('/service/login')
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
+
 app.mount('#app')
